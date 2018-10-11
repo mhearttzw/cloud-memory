@@ -1,6 +1,7 @@
 package com.cloud.memory.service.impl;
 
 import com.cloud.memory.common.exceptions.ParamException;
+import com.cloud.memory.common.util.IDUtil;
 import com.cloud.memory.common.util.ValidatorRegUtil;
 import com.cloud.memory.model.JsonResult;
 import com.cloud.memory.service.SignService;
@@ -10,6 +11,11 @@ public class SignServiceImp implements SignService {
 
     @Autowired
     RedisServiceImpl redisService;
+
+    @Autowired
+    IDUtil idUtil;
+
+    private static String PHONE_STR = "phone:";
 
     /**
      * 用户注册
@@ -30,7 +36,15 @@ public class SignServiceImp implements SignService {
         if (!ValidatorRegUtil.isUsername(nickname)) {
             throw new ParamException("昵称格式不正确");
         }
-        String verifyCode = redisService.
+        String verifyCode = redisService.get(PHONE_STR + phone);
+
         return null;
     }
+
+    @Override
+    public boolean nicknameUnique(String nickname) {
+        return false;
+    }
+
+
 }

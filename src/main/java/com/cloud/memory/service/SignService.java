@@ -18,4 +18,11 @@ public interface SignService {
      * @return
      */
     JsonResult register(String phone, String password, String nickname);
+
+    /**
+     * 判断昵称是否唯一
+     * @param nickname
+     * @return
+     */
+    boolean nicknameUnique(String nickname);
 }

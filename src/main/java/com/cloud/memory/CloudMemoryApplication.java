@@ -18,7 +18,6 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @SpringBootApplication
 @EnableAspectJAutoProxy(proxyTargetClass = true)
-@EnableAutoConfiguration
 @EnableFeignClients
 //@ServletComponentScan(basePackages = "com.cloud.memory.web.servlet")
 public class CloudMemoryApplication {
