@@ -7,10 +7,10 @@ import org.springframework.core.type.AnnotatedTypeMetadata;
 import java.util.Map;
 
 /**
- * @author echelon
- * @email wangzitian@ucfgroup.com
- * @created_time 2018/9/16 20:44
- * @description 系统属性判断
+ * @author           echelon
+ * @email            2954632969@qq.com
+ * @created_time     2018/11/21 10:58
+ * @description      系统属性判断
  */
 public class OnSystemPropertyCondition implements Condition {
 

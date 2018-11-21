@@ -8,7 +8,6 @@
 //
 ///**
 // * @author          echelon
-// * @email           wangzitian@ucfgroup.com
 // * @created_time    2018/9/16 20:58
 // * @description     系统属性条件判断引导类
 // */

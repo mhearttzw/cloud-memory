@@ -21,16 +21,16 @@ public abstract class BaseEntity implements Serializable{
     @Column(name = "id", columnDefinition = "int(10) comment '主键id'")
     protected Long id;
 
-    @Column(name = "create_user", columnDefinition = "int(10) '创建用户id'")
+    @Column(columnDefinition = "int(10) comment '创建用户id'")
     private Long createUser;//创建用户id
 
-    @Column(name = "update_user", columnDefinition = "int(10) '更新用户id'")
+    @Column(columnDefinition = "int(10) comment '更新用户id'")
     private Long updateUser;//更新用户id
 
-    @Column(name = "create_time", columnDefinition = "datetime '创建时间'")
+    @Column(columnDefinition = "datetime comment '创建时间'")
     private Timestamp createTime;//创建时间
 
-    @Column(name = "update_time", columnDefinition = "datetime '更新时间'")
+    @Column(columnDefinition = "datetime comment '更新时间'")
     private Timestamp updateTime;//更新时间
 
     @PrePersist

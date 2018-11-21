@@ -4,6 +4,8 @@ import com.cloud.memory.service.RedisService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * @author           echelon
  * @email            2954632969@qq.com
@@ -24,6 +26,7 @@ public class IDUtil {
     public String genSysId(String prefix, String format) {
         long number = redisService.incr(prefix);
         String numberString = prefix + String.format(format, number);
+        TimeUnit.SECONDS.toMillis(1L);
         return numberString;
     }
 }

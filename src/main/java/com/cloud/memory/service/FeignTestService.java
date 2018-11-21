@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
- * @author          echelon
- * @email           wangzitian@ucfgroup.com
- * @created_time    2018/8/30 17:48
- * @description     用款产品管理接口
+ * @author           echelon
+ * @email            2954632969@qq.com
+ * @created_time     2018/11/21 19:41
+ * @description      用款产品管理接口
  */
 @FeignClient(name = "feignTestService", url = "${rest.feign.test.url}")
 public interface FeignTestService {
